@@ -1,0 +1,14 @@
+#%RAML 1.0
+title: API Error Handler Global
+version: v1
+mediaType: application/json
+
+uses:
+  global-resources: /exchange_modules/e324e3b2-8af2-454c-884d-0af805811a27/global-resources/1.0.9/accelerator-global-resources.raml
+
+
+/error-handler:
+  description: Manage information for a specific error.
+  is: [ global-resources.ErrorResponses, global-resources.PostErrorHandler ]
+  post:
+    description: Return details for an existing errors.
